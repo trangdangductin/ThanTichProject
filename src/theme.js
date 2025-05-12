@@ -1,24 +1,49 @@
-import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
 
-// Create a theme instance.
+import { createTheme } from '@mui/material/styles';
+
+
 const theme = createTheme({
-  cssVariables: true,
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#556cd6',
-    },
-    secondary: {
-      main: '#19857b',
-    },
-    error: {
-      main: red.A400,
-    },
-    text:{
-        secondary: red[500],
-    }
+  thantichCustomObject:{
+    appBarHeight: '48px',
+    boardBarHeight: '58px',
   },
+  colorSchemes: { light: {
+    palette: {
+      primary: {
+        main: '#1976d2',
+      },
+      secondary: {
+        main: '#dc004e',
+      },
+      background: {
+        default: '#fff',
+        paper: '#fff',
+      },
+      text: {
+        primary: '#000',
+        secondary: '#000',
+      },
+    },
+  } , dark: {
+    palette: {
+      primary: {
+        main: '#90caf9',
+      },
+      secondary: {
+        main: '#f48fb1',
+      },
+      background: {
+        default: '#121212',
+        paper: '#121212',
+      },
+      text: {
+        primary: '#fff',
+        secondary: '#fff',
+      },
+    }
+  } ,  },
+  cssVariables: {
+    colorSchemeSelector: 'class'
+  }
 });
-
 export default theme;
