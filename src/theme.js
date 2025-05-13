@@ -4,16 +4,16 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   thantichCustomObject:{
-    appBarHeight: '48px',
+    appBarHeight: '58px',
     boardBarHeight: '58px',
   },
   colorSchemes: { light: {
     palette: {
       primary: {
-        main: '#1976d2',
+        main: '#5f9ea0',
       },
       secondary: {
-        main: '#dc004e',
+        main: '#008b8b',
       },
       background: {
         default: '#fff',
@@ -27,18 +27,18 @@ const theme = createTheme({
   } , dark: {
     palette: {
       primary: {
-        main: '#90caf9',
+        main: '#808080',
       },
       secondary: {
-        main: '#f48fb1',
+        main: '#696969',
       },
       background: {
-        default: '#121212',
-        paper: '#121212',
+        default: '#696969',
+        paper: '#696969',
       },
       text: {
-        primary: '#fff',
-        secondary: '#fff',
+        primary: '#434A56',
+        secondary: '#434A56',
       },
     }
   } ,  },
