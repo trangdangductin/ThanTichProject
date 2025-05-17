@@ -21,6 +21,7 @@ function Document() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<ArrowDropDownIcon />}
+        sx={{color: 'white'}}
       >
         Tài liệu
       </Button>
@@ -33,7 +34,7 @@ function Document() {
           'aria-labelledby': 'basic-button-elo',
         }}
       > 
-         <MenuItem onClick={handleClose}>Thượng Thần Luật</MenuItem>
+        <MenuItem onClick={handleClose}>Thượng Thần Luật</MenuItem>
         <MenuItem onClick={handleClose}>Ban List</MenuItem>
         <MenuItem onClick={handleClose}>Thần Khí</MenuItem>
          

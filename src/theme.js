@@ -3,14 +3,52 @@ import { createTheme } from '@mui/material/styles';
 
 
 const theme = createTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontSize: '1rem',
+          textTransform: 'none',
+        },
+      },
+    },
+    MuiOutlinedInput:{
+      styleOverrides:{
+        root: ({theme}) => ({
+            color: theme.palette.primary.main,
+            fontSize: '0.875rem',
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.primary.main,
+            },
+            '&hover': {'.MuiOutlinedInput-notchedOutline' :{
+              borderColor: theme.palette.primary.main,
+            },      
+          },
+            '& fieldset': {
+              borderColor: theme.palette.primary.main,
+              borderWidth: '1px !important',
+            },
+      })
+    },
+  },
+    MuiInputLabel:{
+      root: ({theme}) => (
+        {
+          color: theme.palette.primary.main,  
+          fontSize: '0.875rem',
+        }
+      )
+    }
+  },
   thantichCustomObject:{
     appBarHeight: '58px',
     boardBarHeight: '58px',
   },
-  colorSchemes: { light: {
+  colorSchemes: { 
+    light: {
     palette: {
       primary: {
-        main: '#5f9ea0',
+        main: '#008b8b',
       },
       secondary: {
         main: '#008b8b',
@@ -24,26 +62,12 @@ const theme = createTheme({
         secondary: '#000',
       },
     },
-  } , dark: {
-    palette: {
-      primary: {
-        main: '#808080',
-      },
-      secondary: {
-        main: '#696969',
-      },
-      background: {
-        default: '#696969',
-        paper: '#696969',
-      },
-      text: {
-        primary: '#434A56',
-        secondary: '#434A56',
-      },
-    }
-  } ,  },
+  } , 
+  
+  },
   cssVariables: {
     colorSchemeSelector: 'class'
   }
+  
 });
 export default theme;

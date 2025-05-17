@@ -9,16 +9,22 @@ import LightModeICon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { SettingsBrightness } from '@mui/icons-material';
 import Container from '@mui/material/Container';
+import BasicTable from '../../../Components/EloBoard/EloBoard.jsx';
+import Cards from '../../../Components/CardHolder/Cards.jsx';
+import { TextField } from '@mui/material';
+import FilterBoard from './CardBoardContent/FilterBoard.jsx';
 function BoardContent() {
   return (
   <Box sx={{
       backgroundColor: 'primary.main', 
         width:'100%',
-        height: (theme)=> `calc(100vh - ${theme.thantichCustomObject.appBarHeight} - ${theme.thantichCustomObject.boardBarHeight})`,
+        height: (theme)=> `calc(100vh - ${theme.thantichCustomObject.appBarHeight})`,
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
+      
      }}>
-      Content
+      <FilterBoard/>
      </Box>
   )
 }
